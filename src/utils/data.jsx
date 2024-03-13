@@ -142,6 +142,10 @@ export const currentSelectedWidgets = [
           id: nanoid(),
           name: 'placeholder2 completed',
         },
+        {
+          id: nanoid(),
+          name: 'placeholder2 completed2',
+        },
       ],
     ],
   },
