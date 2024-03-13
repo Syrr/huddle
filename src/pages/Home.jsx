@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import HeroSubHeader from '../components/HeroSubHeader';
-import TaskWidget from '../components/widgets/TaskWidget';
 import dayjs from 'dayjs';
+import GeneralContentSubHeader from '../components/GeneralContentSubHeader';
+import WidgetContainer from '../components/widgets/WidgetContainer';
 
 const Home = () => {
   const formatTime = () => {
@@ -15,7 +15,7 @@ const Home = () => {
     };
   };
   const [currentTime, setCurrentTime] = useState(() => formatTime());
-  const { hour, minute, second, meridiem } = currentTime;
+  const { hour, minute, second } = currentTime;
 
   useEffect(() => {
     const timeID = setInterval(() => {
@@ -29,12 +29,11 @@ const Home = () => {
   }, []);
   return (
     <div className='flex flex-col'>
-      <HeroSubHeader />
+      <GeneralContentSubHeader />
       <div className='w-full mx-auto flex justify-center'>
         <div className='flex flex-col  items-center'>
           <h6 className='text-base font-semibold'>Monday, March 11 </h6>
           <h2 className='text-4xl mb-4'>Good afternoon, Blood</h2>
-
           <span className='countdown font-mono text-4xl mb-6'>
             <span style={{ '--value': hour }}></span>:
             <span style={{ '--value': minute }}></span>:
@@ -42,12 +41,7 @@ const Home = () => {
           </span>
         </div>
       </div>
-      <section className='grid grid-cols-2 grid-rows-2  gap-6 mx-auto'>
-        <TaskWidget title='my tasks' />
-        <TaskWidget title="tasks i've assigned" />
-        <TaskWidget title='my tasks' />
-        <TaskWidget title="tasks i've assigned" />
-      </section>
+      <WidgetContainer />
       <div className='h-20' />
     </div>
   );

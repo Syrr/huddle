@@ -1,41 +1,28 @@
-import { useState } from 'react';
-const tabs = [
-  {
-    id: 1,
-    name: 'upcoming',
-    text: 'upcoming',
-  },
-  {
-    id: 2,
-    name: 'overdue',
-    text: 'overdue',
-  },
-  {
-    id: 3,
-    name: 'completed',
-    text: 'completed',
-  },
-];
-const TasksWidgetHeader = ({ title }) => {
-  const [activeTab, setActiveTab] = useState(1);
+const GeneralContentSubHeader = ({
+  title,
+  taskTabs,
+  handleCurrentTaskTab,
+  currentTaskTab,
+}) => {
   return (
     <>
       <header className='flex flex-col p-8 pb-0 font-semibold text-2xl capitalize mb-4'>
         {title}
       </header>
       <div className='pl-8 flex gap-4 capitalize text-xs font-medium'>
-        {tabs.map((tab) => {
+        {taskTabs?.map((tab) => {
           const { id, name: tabName, text } = tab;
+          console.log(id);
           return (
             <span
               key={id}
               name={tabName}
               className={`${
-                id === activeTab
+                id === currentTaskTab
                   ? 'border-b-2 border-primary cursor-pointer'
                   : 'pb-1 cursor-pointer border-b-2 border-transparent hover:border-b-2 hover:border-primary'
               }`}
-              onClick={() => setActiveTab(id)}
+              onClick={() => handleCurrentTaskTab(id)}
             >
               {text}
             </span>
@@ -46,4 +33,4 @@ const TasksWidgetHeader = ({ title }) => {
   );
 };
 
-export default TasksWidgetHeader;
+export default GeneralContentSubHeader;

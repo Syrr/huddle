@@ -84,17 +84,65 @@ export const sidebarLinks = [
   },
 ];
 
-export const taskWidgetTestData = [
+export const currentSelectedWidgets = [
   {
     id: nanoid(),
-    name: 'placeholder1',
+    type: 'task',
+    title: 'my tasks',
+    currentSelectedTab: 0,
+    tasks: [
+      [
+        {
+          id: nanoid(),
+          name: 'placeholder1 upcoming',
+        },
+        {
+          id: nanoid(),
+          name: 'booger',
+        },
+      ],
+      [
+        {
+          id: nanoid(),
+          name: 'placeholdr1 overdue',
+        },
+        {
+          id: nanoid(),
+          name: 'get snotted',
+        },
+      ],
+      [
+        {
+          id: nanoid(),
+          name: 'placeholder1 completed',
+        },
+      ],
+    ],
   },
   {
     id: nanoid(),
-    name: 'placeholder2',
-  },
-  {
-    id: nanoid(),
-    name: 'placeholder3',
+    type: 'task',
+    title: "tasks i've assigned",
+    currentSelectedTab: 0,
+    tasks: [
+      [
+        {
+          id: nanoid(),
+          name: 'placeholder2 upcoming',
+        },
+      ],
+      [
+        {
+          id: nanoid(),
+          name: 'placeholdr2 overdue',
+        },
+      ],
+      [
+        {
+          id: nanoid(),
+          name: 'placeholder2 completed',
+        },
+      ],
+    ],
   },
 ];
