@@ -9,12 +9,18 @@ import {
   Project,
   Workspace,
   Login,
+  ProtectedRoute,
+  Landing,
 } from './pages';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomeLayout />,
+    element: (
+      <ProtectedRoute>
+        <HomeLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         index: true,
@@ -51,6 +57,10 @@ const router = createBrowserRouter([
         ],
       },
     ],
+  },
+  {
+    path: '/landing',
+    element: <Landing />,
   },
   {
     path: '/login',

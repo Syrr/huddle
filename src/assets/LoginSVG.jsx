@@ -105,7 +105,7 @@ const LoginSVG = ({ color, lines }) => {
       <path
         d='M1004.98163,709.57417h-738.294a1.19069,1.19069,0,0,1,0-2.38137h738.294a1.19069,1.19069,0,0,1,0,2.38137Z'
         transform='translate(-165.00003 -189.93073)'
-        fill='#3f3d56'
+        // fill='#3f3d56'
         className={color}
       />
       <path
