@@ -13,7 +13,7 @@ const SidebarBody = ({ sidebarLinks }) => {
   };
 
   return (
-    <div className='border-t-[1px] border-t-neutral p-4'>
+    <div className='border-t-[1px] border-t-neutral-content p-4'>
       {sidebarLinks[1].links.map((link, i) => {
         const { subLinks } = link;
 

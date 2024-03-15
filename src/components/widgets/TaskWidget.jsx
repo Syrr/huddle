@@ -6,7 +6,7 @@ import { setTaskWidgetTab } from '../../features/task/taskSlice';
 import TaskWidgetHeader from './TaskWidgetHeader';
 
 const TaskWidget = memo(
-  ({ id: widgetID, title, tasks: userTasks, taskTabs, currentSelectedTab }) => {
+  ({ id: widgetID, title, tasks: userTasks, tabs, currentSelectedTab }) => {
     const dispatch = useDispatch();
 
     const handleCurrentTaskTab = (widgetID, tabIndex) => {
@@ -17,7 +17,7 @@ const TaskWidget = memo(
       <div className='bg-base-100 rounded-lg h-96 w-[590px] shadow-lg border-[1px] border-base-300 hover:border-neutral-content'>
         <TaskWidgetHeader
           title={title}
-          taskTabs={taskTabs}
+          tabs={tabs}
           currentSelectedTab={currentSelectedTab}
           handleCurrentTaskTab={handleCurrentTaskTab}
           widgetID={widgetID}

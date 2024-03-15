@@ -8,7 +8,7 @@ const HomeLayout = () => {
       <Navbar />
       <section className='flex h-full overflow-clip'>
         <Sidebar />
-        <div className='grow bg-base-200 overflow-auto'>
+        <div className='grow bg-base-300 overflow-auto'>
           <Outlet />
         </div>
       </section>

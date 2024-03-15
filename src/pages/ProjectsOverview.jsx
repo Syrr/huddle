@@ -1,7 +1,13 @@
-import React from 'react';
+import { useParams } from 'react-router';
+import SingleProject from './SingleProject';
 
 const ProjectsOverview = () => {
-  return <div>ProjectsOverview</div>;
+  const { id: singleProjectID } = useParams();
+  return (
+    <div>
+      {singleProjectID ? <SingleProject key={singleProjectID} /> : 'overview'}
+    </div>
+  );
 };
 
 export default ProjectsOverview;

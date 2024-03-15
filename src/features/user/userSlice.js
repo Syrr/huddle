@@ -8,7 +8,10 @@ const getThemeFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem('theme')) || null;
 };
 const initialState = {
-  user: getUserFromLocalStorage(),
+  user: {
+    username: 'demoUser',
+    password: 'password',
+  },
   theme: getThemeFromLocalStorage(),
 };
 

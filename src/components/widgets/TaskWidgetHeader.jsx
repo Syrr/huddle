@@ -3,7 +3,7 @@ import React from 'react';
 const TaskWidgetHeader = ({
   widgetID,
   title,
-  taskTabs,
+  tabs,
   currentSelectedTab,
   handleCurrentTaskTab,
 }) => {
@@ -13,7 +13,7 @@ const TaskWidgetHeader = ({
         {title}
       </header>
       <div className='pl-8 flex gap-4 capitalize text-xs font-medium'>
-        {taskTabs?.map((tab, i) => {
+        {tabs?.map((tab, i) => {
           return (
             <span
               key={i}

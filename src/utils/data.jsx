@@ -3,6 +3,10 @@ import { RiHome2Line } from 'react-icons/ri';
 import { IoCheckmarkCircleOutline } from 'react-icons/io5';
 import { GoBell } from 'react-icons/go';
 import { FaSquare } from 'react-icons/fa';
+import { TbChecklist } from 'react-icons/tb';
+import { CiBoxList } from 'react-icons/ci';
+import { MdLeaderboard } from 'react-icons/md';
+import { FaRegCalendarAlt } from 'react-icons/fa';
 
 import { nanoid } from 'nanoid';
 
@@ -42,16 +46,14 @@ export const sidebarLinks = [
         subLinks: [
           {
             id: nanoid(),
-
             name: 'project1',
-            path: '/projectsOverview/project',
+            path: `/projectsOverview`,
             icon: <FaSquare />,
           },
           {
             id: nanoid(),
-
             name: 'project2',
-            path: '/projectsOverview/project',
+            path: '/projectsOverview',
             icon: <FaSquare />,
           },
         ],
@@ -68,14 +70,14 @@ export const sidebarLinks = [
             id: nanoid(),
             category: 'workspace',
             name: 'workspace1',
-            path: '/workspacesOverview/workspace',
+            path: '/workspace',
             icon: <FaSquare />,
           },
           {
             id: nanoid(),
             category: 'workspace',
             name: 'workspace2',
-            path: '/workspacesOverview/workspace',
+            path: '/workspace',
             icon: <FaSquare />,
           },
         ],
@@ -148,5 +150,25 @@ export const currentSelectedWidgets = [
         },
       ],
     ],
+  },
+];
+
+export const projectTabs = [
+  {
+    text: 'overview',
+    icon: <TbChecklist />,
+  },
+  {
+    text: 'list',
+    icon: <CiBoxList />,
+  },
+
+  {
+    text: 'board',
+    icon: <MdLeaderboard />,
+  },
+  {
+    text: 'calendar',
+    icon: <FaRegCalendarAlt />,
   },
 ];

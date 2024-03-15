@@ -2,8 +2,8 @@ import React from 'react';
 
 const SidebarFooter = () => {
   return (
-    <div className='p-4 border-t-[1px] border-t-neutral flex items-center justify-evenly'>
-      <button className='btn btn-ghost  rounded-md min-h-8 h-8 p-0 w-16 border-none'>
+    <div className='p-4 border-t-[1px] border-t-neutral-content flex items-center justify-evenly'>
+      <button className='btn btn-ghost rounded-md min-h-8 h-8 p-0 w-16 border-none'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'
@@ -23,7 +23,7 @@ const SidebarFooter = () => {
           <path d='M6 21v-2a4 4 0 0 1 4 -4h4' />
         </svg>
       </button>
-      <div className='h-8 w-px bg-neutral'></div>
+      <div className='h-8 w-px bg-neutral-content'></div>
       <button
         type='button'
         className='btn btn-ghost  rounded-md min-h-8 h-8 p-0 w-16 border-none'

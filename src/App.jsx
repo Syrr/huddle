@@ -6,7 +6,7 @@ import {
   Tasks,
   HomeLayout,
   WorkspacesOverview,
-  Project,
+  SingleProject,
   Workspace,
   Login,
   ProtectedRoute,
@@ -37,11 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/projectsOverview',
         element: <ProjectsOverview />,
-
         children: [
           {
-            path: '/projectsOverview/project/:id',
-            element: <Project />,
+            path: ':id',
+            element: <SingleProject />,
           },
         ],
       },
@@ -51,7 +50,7 @@ const router = createBrowserRouter([
 
         children: [
           {
-            path: '/workspacesOverview/workspace/:id',
+            path: ':id',
             element: <Workspace />,
           },
         ],

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
-import GeneralContentSubHeader from '../components/GeneralContentSubHeader';
 import WidgetContainer from '../components/widgets/WidgetContainer';
+import SectionStackDivider from '../components/SectionStackDivider';
 
 const Home = () => {
   const formatTime = () => {
@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
   return (
     <div className='flex flex-col'>
-      <GeneralContentSubHeader />
+      <SectionStackDivider />
       <div className='w-full mx-auto flex justify-center'>
         <div className='flex flex-col  items-center'>
           <h6 className='text-base font-semibold'>Monday, March 11 </h6>
